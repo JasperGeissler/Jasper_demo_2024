@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function mijnfunctie(){
+            document.getElementById("uitvoer").style.backgroundColor = 'white'
+            var voornaam = document.getElementById("invoerveld").value;
+            console.log(voornaam);
+            if(voornaam == "joost"){
+                document.getElementById("uitvoer").innerHTML = "Niet welkom "+voornaam;
+                document.getElementById("uitvoer").style.backgroundColor = 'red';
+            }else{
+                document.getElementById("uitvoer").innerHTML = "Welkom "+voornaam;
+                document.getElementById("uitvoer").style.backgroundColor = 'white';
+            }
+            document.getElementById("invoerveld").value = "";
+        }
+    </script>
+</head>
+<body>
+    <input id="invoerveld">
+    <button onclick="mijnfunctie()">Klik hier</button>
+    <div id="uitvoer"></div>
+    <br><br><br><br>
+    - Maak een programma waar iedereen welkom is behalve Joost<br>
+    - Gevorderd: wijzig de kleur naar rood of groen van de div 
+    (reference guide)
+</body>
+</html>
